@@ -12,7 +12,7 @@ dl, dd, ol, ul, figure {
  */
 body {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
   color: #111;
@@ -140,7 +140,7 @@ pre {
   height: 16px;
   vertical-align: middle; }
   .icon > svg path {
-    fill: #FFFFFF; }
+    fill: #828282; }
 
 /**
  * Site header
@@ -443,7 +443,8 @@ pre {
 
 body {
   background: #24aba7;
-  color: #fff; }
+  color: #fff;
+  font-size: 18px; }
 
 a {
   color: #fff; }
@@ -472,6 +473,8 @@ a {
   .social-media-list li .icon > svg {
     width: 36px;
     height: 36px; }
+  .social-media-list li .icon > svg path {
+    fill: #FFFFFF; }
 
 @media screen and (min-width: 728px) {
   .left {
