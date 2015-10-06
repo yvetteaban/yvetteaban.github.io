@@ -12,7 +12,7 @@ dl, dd, ol, ul, figure {
  */
 body {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   font-weight: 300;
   color: #111;
@@ -140,15 +140,12 @@ pre {
   height: 16px;
   vertical-align: middle; }
   .icon > svg path {
-    fill: #828282; }
+    fill: #FFFFFF; }
 
 /**
  * Site header
  */
 .site-header {
-  border-top: 5px solid #424242;
-  border-bottom: 1px solid #e8e8e8;
-  min-height: 56px;
   position: relative; }
 
 .site-title {
@@ -205,10 +202,6 @@ pre {
 /**
  * Site footer
  */
-.site-footer {
-  border-top: 1px solid #e8e8e8;
-  padding: 30px 0; }
-
 .footer-heading {
   font-size: 18px;
   margin-bottom: 15px; }
@@ -448,8 +441,14 @@ pre {
   .highlight .il {
     color: #099; }
 
+body {
+  background: #24aba7;
+  color: #fff; }
+
+a {
+  color: #fff; }
+
 .site-header {
-  background: #270034;
   border: none;
   text-transform: uppercase; }
   .site-header .site-title {
@@ -460,23 +459,11 @@ pre {
       .site-header .site-nav .page-link {
         color: #fff; } }
 
-.intro {
-  border-bottom: 1px solid #ccc;
-  margin: 0;
-  padding: 40px 0 80px;
-  text-align: center; }
-
-.portfolio {
-  margin: 80px 0; }
-  .portfolio .pnav {
-    overflow: hidden; }
-  .portfolio .pthumbs {
-    background: #ccc;
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-    .portfolio .pthumbs li {
-      display: inline-block; }
+.page-content h1 {
+  margin: 0; }
+.page-content h2 {
+  font-size: 1.2em;
+  margin-bottom: 30px; }
 
 .social-media-list li {
   display: inline-block; }
