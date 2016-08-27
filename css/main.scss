@@ -121,17 +121,17 @@ h1, h2, h3, h4, h5, h6 {
       margin-bottom: $spacing-unit;
       position: relative;
       .inner {
-        background-color: $dark-grey-lighter;
-        height: 100%;
-        min-height: 220px;
+        //background-color: $dark-grey-lighter;
+        //height: 100%;
+        //min-height: 220px;
         overflow: hidden;
         position: relative;
-        @media screen and (min-width: $on-palm){
-          min-height: 295px;
-        }
-        img {
-          @include centerer;
-        }
+        // @media screen and (min-width: $on-palm){
+        //   min-height: 295px;
+        // }
+        // img {
+        //   @include centerer;
+        // }
       }
     }
   }
