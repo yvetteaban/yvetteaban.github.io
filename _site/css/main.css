@@ -1,6 +1,8 @@
 /**
  * Reset some basic elements
  */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Lora);
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -11,7 +13,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
@@ -442,43 +444,7 @@ pre {
     color: #099; }
 
 body {
-  background: #24aba7;
-  color: #fff;
-  font-size: 18px; }
+  font-family: "Open Sans", sans-serif; }
 
-a {
-  color: #fff; }
-
-.site-header {
-  border: none;
-  text-transform: uppercase; }
-  .site-header .site-title {
-    color: #fff; }
-  .site-header .site-nav .page-link {
-    font-size: .90em; }
-    @media screen and (min-width: 421px) {
-      .site-header .site-nav .page-link {
-        color: #fff; } }
-
-.page-content h1 {
-  margin: 0; }
-.page-content h2 {
-  font-size: 1.2em;
-  margin-bottom: 30px; }
-
-.social-media-list li {
-  display: inline-block; }
-  .social-media-list li .username {
-    display: none; }
-  .social-media-list li .icon > svg {
-    width: 36px;
-    height: 36px; }
-  .social-media-list li .icon > svg path {
-    fill: #FFFFFF; }
-
-@media screen and (min-width: 728px) {
-  .left {
-    float: left; }
-
-  .right {
-    float: right; } }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif; }
