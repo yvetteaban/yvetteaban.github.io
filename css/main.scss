@@ -100,12 +100,12 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
   .intro {
-    margin: 0 auto;
+    //margin: 0 auto;
     padding: 100px 0;
     text-align: center;
-    @media screen and (min-width: $on-palm){
-      width: 70%;
-    }
+    // @media screen and (min-width: $on-palm){
+    //   width: 70%;
+    // }
     h2 {
       margin: 0 0 30px;
       @media screen and (max-width: $on-palm){
