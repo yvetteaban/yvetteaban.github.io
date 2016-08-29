@@ -6283,6 +6283,9 @@ h1, h2, h3, h4, h5, h6 {
       margin-top: 0; }
     .site-header .intro h3 {
       margin-bottom: 30px; }
+      @media screen and (max-width: 600px) {
+        .site-header .intro h3 {
+          font-size: 22px; } }
 
 /* Selected Work */
 .portfolio {
@@ -6313,4 +6316,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 0; }
     .site-footer .social-media-list li {
       display: inline-block;
-      padding: 0 20px; }
+      padding: 0 10px; }
+      @media screen and (min-width: 600px) {
+        .site-footer .social-media-list li {
+          padding: 0 20px; } }
