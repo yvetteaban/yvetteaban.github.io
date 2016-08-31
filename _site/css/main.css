@@ -4,6 +4,7 @@
  */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,800);
 @import url(https://fonts.googleapis.com/css?family=Vollkorn:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -6102,7 +6103,7 @@ body {
   flex-direction: column; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Vollkorn', serif; }
+  font-family: "Roboto Slab", serif; }
 
 .standout {
   background-color: #28c0bc;
@@ -6120,6 +6121,9 @@ h1, h2, h3, h4, h5, h6 {
 .lighttext {
   color: #828282; }
 
+a, a:visited, a:active {
+  color: #24aba7; }
+
 a:hover {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
@@ -6135,11 +6139,13 @@ a:hover {
   .site-header .site-nav {
     padding-top: 20px; }
     .site-header .site-nav a {
-      font-weight: 600;
-      text-transform: uppercase; }
+      font-family: "Roboto Slab", serif;
+      font-weight: 400; }
       .site-header .site-nav a:hover {
         color: #333333;
         text-decoration: none; }
+      .site-header .site-nav a.active {
+        border-bottom: 2px solid #176c69; }
     .site-header .site-nav ul {
       margin: 0;
       padding: 0;

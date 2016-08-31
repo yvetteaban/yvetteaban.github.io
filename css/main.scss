@@ -9,6 +9,7 @@ $base-font-family: 'Open Sans', sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
+$serif-font: 'Roboto Slab', serif;
 
 $spacing-unit:     20px;
 
@@ -62,6 +63,7 @@ $on-laptop:        800px;
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,800);
 @import url(https://fonts.googleapis.com/css?family=Vollkorn:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 
 html {
   height: 100%;
@@ -74,7 +76,7 @@ body {
   flex-direction: column;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Vollkorn', serif;
+  font-family: $serif-font;
 }
 .standout {
   background-color: $teal-color-lighter;
@@ -91,6 +93,9 @@ h1, h2, h3, h4, h5, h6 {
 .lighttext {
   color: $grey-color;
 }
+a, a:visited, a:active {
+  color: $teal-color;
+}
 a:hover {
     @include fade;
 }
@@ -105,14 +110,14 @@ a:hover {
   .site-nav {
     padding-top: $spacing-unit;
     a {
-      font-weight: 600;
-      //padding: 0 5px;
-      text-transform: uppercase;
+      font-family: $serif-font;
+      font-weight: 400;
       &:hover {
-        //background-color: $teal-color-darker;
-        //border-bottom: 2px solid $teal-color-darker;
         color: $dark-grey;
         text-decoration: none;
+      }
+      &.active {
+        border-bottom: 2px solid $teal-color-darker;
       }
     }
     ul {
