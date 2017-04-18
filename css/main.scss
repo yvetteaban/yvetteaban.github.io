@@ -10,6 +10,7 @@ $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 $serif-font: 'Roboto Slab', serif;
+$header-block-font: 'Source Sans Pro', sans-serif;
 
 $spacing-unit:     20px;
 
@@ -26,7 +27,7 @@ $white-color: #ffffff;
 $teal-color: #24aba7;
 $teal-color-lighter: lighten($teal-color, 5%);
 $teal-color-darker: darken($teal-color, 15%);
-$dark-grey: #333333;
+$dark-grey: #222222;
 $dark-grey-lighter: lighten($dark-grey, 40%);
 $finehumans-yellow: #CFC329;
 
@@ -61,9 +62,8 @@ $on-laptop:        800px;
   "bootstrap"
 ;
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,800);
-@import url(https://fonts.googleapis.com/css?family=Vollkorn:400,700);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Sans+Pro:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 
 html {
   height: 100%;
@@ -102,18 +102,24 @@ a:hover {
 
 /* Header */
 .site-header {
-  background: url('../assets/bg-pattern.png') rgb(36, 171, 167);
+  background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.30)), url('../assets/bg-yvetteaban.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: $white-color;
   a {
     color: $white-color;
   }
   .site-nav {
+    padding-bottom: $spacing-unit;
     padding-top: $spacing-unit;
     a {
-      font-family: $serif-font;
-      font-weight: 400;
+      font-family: $header-block-font;
+      font-weight: 600;
+      text-transform: uppercase;
+
       &:hover {
-        color: $dark-grey;
+        color: $teal-color-darker;
         text-decoration: none;
       }
       &.active {
@@ -134,7 +140,12 @@ a:hover {
     padding: 100px 0;
     text-align: center;
     h2 {
-      margin: 0 0 30px;
+      font-family: $header-block-font;
+      font-size: 3em;
+      font-weight: 700;
+      margin: 0 0 20px;
+      text-transform: uppercase;
+
       @media screen and (max-width: $on-palm){
         font-size: 1.5em;
       }
@@ -143,6 +154,9 @@ a:hover {
       @media screen and (max-width: $on-palm){
         line-height: 1.5em;
       }
+    }
+    @media screen and (min-width: $on-palm){
+      padding: 200px 0;
     }
   }
 }
@@ -191,6 +205,12 @@ a:hover {
   }
 }
 
+.blog-list {
+  h2 {
+    text-align: center;
+  }
+}
+
 /* Footer */
 .site-footer {
   background-color: $dark-grey;
@@ -212,9 +232,14 @@ a:hover {
     li {
       display: inline-block;
       padding: 0 10px;
-      @media screen and (min-width: $on-palm){
-        padding: 0 $spacing-unit;
+
+      a {
+        font-size: 1.2em;
       }
+
+      // @media screen and (min-width: $on-palm){
+      //   padding: 0 $spacing-unit;
+      // }
     }
   }
 }
