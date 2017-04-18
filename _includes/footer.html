@@ -2,28 +2,34 @@
 
 <ul class="social-media-list">
   <div class="container">
+    {% if site.instagram_username %}
+    <li>
+      <a href="https://www.instagram.com/{{ site.instagram_username }}" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
+    </li>
+    {% endif %}
+
     {% if site.twitter_username %}
     <li>
-      <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">Twitter</a>
+      <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
     </li>
     {% endif %}
 
     {% if site.github_username %}
     <li>
-      <a href="https://github.com/{{ site.github_username }}" target="_blank">Github</a>
+      <a href="https://github.com/{{ site.github_username }}" target="_blank" title="Github"><i class="fa fa-github"></i></a>
     </li>
     {% endif %}
 
     {% if site.linkedin_username %}
     <li>
-      <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank">LinkedIn</a>
+      <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" title="LinkedIn"><i class="fa fa-linkedin-square"></i></a>
     </li>
     {% endif %}
   </div>
 </ul>
 
 <div class="container">
-  <p><small>&copy; 2016 Yvette Aban. Thanks for stopping by! Contact me at <a href="mailto:hello@yvetteaban.com">hello@yvetteaban.com</a></small></p>
+  <p><small>&copy; 2016 Yvette Aban. All Rights Reserved. Thanks for stopping by!</small></p>
 </div>
 
 </footer>
