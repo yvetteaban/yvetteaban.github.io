@@ -6129,9 +6129,15 @@ a:hover {
   -webkit-transition-property: color, background-color;
   transition-property: color, background-color; }
 
+::-moz-selection {
+  background-color: #24aba7; }
+
+::selection {
+  background-color: #24aba7; }
+
 /* Header */
 .site-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/bg-yvetteaban.jpg");
+  background: url("../assets/bg-yvetteaban.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6164,7 +6170,8 @@ a:hover {
       font-family: "Source Sans Pro", sans-serif;
       font-size: 3em;
       font-weight: 700;
-      margin: 0 0 20px;
+      line-height: 1.5em;
+      margin: 0;
       text-transform: uppercase; }
       @media screen and (max-width: 600px) {
         .site-header .intro h2 {

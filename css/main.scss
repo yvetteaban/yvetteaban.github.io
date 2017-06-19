@@ -99,10 +99,16 @@ a, a:visited, a:active {
 a:hover {
     @include fade;
 }
+::-moz-selection {
+  background-color: $teal-color;
+}
+::selection {
+  background-color: $teal-color;
+}
 
 /* Header */
 .site-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.30)), url('../assets/bg-yvetteaban.jpg');
+  background: url('../assets/bg-yvetteaban.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -143,7 +149,8 @@ a:hover {
       font-family: $header-block-font;
       font-size: 3em;
       font-weight: 700;
-      margin: 0 0 20px;
+      line-height: 1.5em;
+      margin: 0;
       text-transform: uppercase;
 
       @media screen and (max-width: $on-palm){
