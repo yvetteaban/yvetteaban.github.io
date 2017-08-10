@@ -1,15 +1,16 @@
-<header class="site-header">
+<div class="sidebar-wrap">
 
-  <div class="container">
+  <header class="name-card">
+    <div class="avatar">
+      <a href="{{ site.baseurl }}/" title="Yvette Aban"><img src="{{ site.baseurl }}/assets/yvette-avatar.jpg" alt="Yvette Aban profile pic"></a>
+    </div>
 
-    <nav class="site-nav">
-      <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-      <ul>
-        <li><a href="/">Work</a></li>
-        <li><a href="/adventure">Adventure</a></li>
-      </ul>
-    </nav>
+    <h1><a class="site-title" href="{{ site.baseurl }}/" title="Yvette Aban">{{ site.title }}</a></h1>
 
-  </div>
+    <h2>Designer. Adventurer. Always hungry.</h2>
 
-</header>
+  </header>
+
+  {% include footer.html %}
+
+</div>  
