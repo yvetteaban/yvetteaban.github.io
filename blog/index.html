@@ -1,0 +1,24 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="blog-list">
+
+{% include nav.html %}
+
+	<h2>Blog Posts</h2>
+
+	{% for post in site.posts %}
+	<div class="post-summary">
+		<h3><a href="{{post.url}}">{{post.title}}</a></h3>
+
+		<h4>{{post.date | date: "%B %-d, %Y"}}</h4>
+
+		{{post.excerpt}}
+
+		<p><a class="call-to-action" href="{{post.url}}">Read more</a></p>
+	</div>
+	{% endfor %}
+
+</div>
