@@ -6119,7 +6119,8 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none; }
 
 .lighttext {
-  color: #828282; }
+  color: #828282;
+  font-family: "Roboto Slab", serif; }
 
 a, a:visited, a:active {
   color: #666666;
@@ -6242,7 +6243,7 @@ a:hover {
   @media screen and (min-width: 600px) {
     .main .page-content {
       padding: 20px 40px; } }
-  .main .page-content a {
+  .main .page-content p a, .main .page-content li a {
     border-bottom: solid 1px rgba(85, 85, 85, 0.2); }
   .main .page-content h3 > a {
     border-bottom: none; }
@@ -6253,18 +6254,10 @@ a:hover {
 /* links at the top right */
 .site-nav {
   padding-bottom: 20px; }
-  .site-nav a {
-    border: solid 1px rgba(85, 85, 85, 0.2);
-    color: #666666;
-    padding: 3px 5px; }
-    .site-nav a:hover {
-      color: #009fba;
-      text-decoration: none; }
-    .site-nav a.active {
-      border-bottom: 2px solid #009fba; }
   .site-nav ul {
-    margin: 0;
-    padding: 0; }
+    margin: 0 auto;
+    padding: 0;
+    text-align: center; }
     @media screen and (min-width: 600px) {
       .site-nav ul {
         float: right; } }
@@ -6274,6 +6267,16 @@ a:hover {
       @media screen and (min-width: 600px) {
         .site-nav ul li {
           padding: 0 0 0 10px; } }
+      .site-nav ul li a {
+        border: solid 1px rgba(0, 159, 86, 0.3) !important;
+        color: #666666;
+        display: block;
+        padding: 3px 5px; }
+        .site-nav ul li a:hover {
+          color: #009fba;
+          text-decoration: none; }
+        .site-nav ul li a.active {
+          border-bottom: 2px solid #009fba; }
 
 /* homepage / landing page */
 .home {
