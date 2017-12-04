@@ -6229,7 +6229,8 @@ a:hover {
         .site-nav ul li {
           text-align: left; } }
       .site-nav ul li a {
-        color: #ffffff; }
+        color: #ffffff;
+        font-size: 1.2em; }
         .site-nav ul li a:hover {
           color: #424242;
           text-decoration: none; }
