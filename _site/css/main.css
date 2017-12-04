@@ -6231,10 +6231,8 @@ a:hover {
       .site-nav ul li a {
         color: #ffffff; }
         .site-nav ul li a:hover {
-          color: #009fba;
+          color: #424242;
           text-decoration: none; }
-        .site-nav ul li a.active {
-          border-bottom: 2px solid #009fba; }
 
 .site-footer {
   color: #ffffff; }

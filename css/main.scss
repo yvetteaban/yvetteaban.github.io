@@ -213,12 +213,12 @@ a:hover {
         color: $white-color;
 
         &:hover {
-          color: $teal-color;
+          color: $gray-color-dark;
           text-decoration: none;
         }
-        &.active {
-          border-bottom: 2px solid $teal-color;
-        }
+        // &.active {
+        //   border-bottom: 2px solid $teal-color;
+        // }
       }      
     }
   }
