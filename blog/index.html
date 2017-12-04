@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 ---
 
 <div class="blog-list">
@@ -9,18 +9,31 @@ layout: post
 	<h2>Blog Posts</h2>
 
 	{% for post in site.posts %}
-	<div class="post-summary">
-	
-		{% assign image = post.images[0] %}
+		<div class="post-summary">
+		
+			<!-- {% assign image = post.images[0] %} -->
 
-		<h3><a href="{{post.url}}">{{post.title}}</a></h3>
+			{% assign foundImage = 0 %}
+			{% assign images = post.content | split:"<img " %}
+			{% for image in images %}
+			{% if image contains 'src' %}
 
-		<h4>{{post.date | date: "%B %-d, %Y"}}</h4>
+			    {% if foundImage == 0 %}
+			        {% assign html = image | split:"/>" | first %}
+			        <p><img height="200" {{ html }} /></p>
+			        {% assign foundImage = 1 %}
+			    {% endif %}
+			{% endif %}
+			{% endfor %}
 
-		{{post.excerpt}}
+			<h3><a href="{{post.url}}">{{post.title}}</a></h3>
 
-		<p><a class="call-to-action" href="{{post.url}}">Read more</a></p>
-	</div>
+			<!-- <p>{{post.date | date: "%B %-d, %Y"}}</p> -->
+
+			{{post.excerpt}}
+
+			<!-- <p><a class="call-to-action" href="{{post.url}}">Read more</a></p> -->
+		</div>
 	{% endfor %}
 
 </div>
