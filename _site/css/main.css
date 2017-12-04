@@ -6262,7 +6262,7 @@ a:hover {
   @media screen and (min-width: 600px) {
     .main .page-content {
       padding: 20px 40px; } }
-  .main .page-content p a, .main .page-content li a {
+  .main .page-content p a.call-to-action, .main .page-content li a.call-to-action {
     border-bottom: solid 1px rgba(85, 85, 85, 0.2); }
   .main .page-content h3 > a {
     border-bottom: none; }
@@ -6278,7 +6278,7 @@ a:hover {
   overflow: auto;
   padding-bottom: 20px; }
   .post-summary img {
-    margin: 0 20px 0 0; }
+    margin: 0; }
     @media screen and (min-width: 600px) {
       .post-summary img {
         float: left;
