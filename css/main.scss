@@ -1,8 +1,7 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
-@charset "utf-8";
 
+@charset "utf-8";
 
 // Our variables
 $base-font-family: 'Open Sans', sans-serif;
@@ -56,6 +55,8 @@ $on-laptop:        800px;
   -webkit-transition-property: color, background-color;
   transition-property: color, background-color;
 }
+
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
   "base",
@@ -149,7 +150,7 @@ a:hover {
   }
 
   .sidebar-wrap {
-    padding: 80px 0;
+    padding: 40px 0;
     clear: both;
     text-align: center;
 
@@ -188,6 +189,40 @@ a:hover {
     }
   }
 } 
+
+/* sidebar navigation */
+.site-nav {
+  padding-bottom: $spacing-unit;
+  ul {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+
+    // @media screen and (min-width: $on-palm){
+    //   float: right;
+    // }
+    li {
+      list-style: none;
+      padding: 0;
+
+      @media screen and (min-width: $on-palm){
+        text-align: left; 
+      }
+
+      a {
+        color: $white-color;
+
+        &:hover {
+          color: $teal-color;
+          text-decoration: none;
+        }
+        &.active {
+          border-bottom: 2px solid $teal-color;
+        }
+      }      
+    }
+  }
+}
 
 .site-footer {
   color: $white-color;
@@ -246,65 +281,46 @@ a:hover {
   margin-top: $spacing-unit*2;
 }
 
-/* links at the top right */
-.site-nav {
-  padding-bottom: $spacing-unit;
-  ul {
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
+/* homepage / landing page */
+// .home {
+//   text-align: left;
 
-    @media screen and (min-width: $on-palm){
-      float: right;
-    }
-    li {
-      display: inline-block;
-      padding: 0 10px 0 0;
+//   .project-list { 
+//     margin-left: 0;
+//     padding-left: 0;
+//     li {
+//       line-height: 1.5em;
+//       list-style: none;
 
-      @media screen and (min-width: $on-palm){
-        padding: 0 0 0 10px;
-      }
+//       a {
+//         color: $dark-gray;
+//         border-bottom: solid 1px rgba(85,85,85,.2);
 
-      a {
-        border: solid 1px rgba(0,159,86,.3) !important;
-        color: $dark-gray;
-        display: block;
-        padding: 3px 5px;
+//         &:hover {
+//           color: $teal-color;
+//           text-decoration: none;
+//         }
+//       }
+//     }
+//   }
+// }
 
-        &:hover {
-          color: $teal-color;
-          text-decoration: none;
-        }
-        &.active {
-          border-bottom: 2px solid $teal-color;
-        }
-      }      
-    }
+.post-summary {
+  border-bottom: 1px solid $gray-color-light;
+  clear: both;
+  margin-bottom: 20px;
+  overflow: auto;
+  padding-bottom: 20px;
+
+  img {
+    //display: inline;
+    float: left;
+    margin: 0 20px 0 0;
   }
 }
-
-/* homepage / landing page */
-.home {
-  text-align: left;
-
-  .project-list { 
-    margin-left: 0;
-    padding-left: 0;
-    li {
-      line-height: 1.5em;
-      list-style: none;
-
-      a {
-        color: $dark-gray;
-        border-bottom: solid 1px rgba(85,85,85,.2);
-
-        &:hover {
-          color: $teal-color;
-          text-decoration: none;
-        }
-      }
-    }
-  }
+.post-meta {
+  color: $gray-color;
+  font-size: 80%;
 }
 
 /* projects landing page */

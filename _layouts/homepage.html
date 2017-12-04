@@ -1,29 +1,33 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-{% include head.html %}
 
-<body>
-
-<div class="container-fluid">
-  <div class="row display-flex">
-
-  <div class="col-sm-4 col-md-4 left-sidebar">
-    {% include header.html %}
-  </div>
-
-  <div class="col-sm-8 col-sm-offset-4 col-md-8 col-md-offset-4 main">
-
-    <div class="page-content">
-    	{{ content }}
-    </div>
+{% for post in site.posts %}
+  <div class="post-summary">
   
+    <!-- {% assign image = post.images[0] %} -->
+
+    {% assign foundImage = 0 %}
+    {% assign images = post.content | split:"<img " %}
+    {% for image in images %}
+    {% if image contains 'src' %}
+
+        {% if foundImage == 0 %}
+            {% assign html = image | split:"/>" | first %}
+            <p><img height="200" {{ html }} /></p>
+            {% assign foundImage = 1 %}
+        {% endif %}
+    {% endif %}
+    {% endfor %}
+
+    <h3><a href="{{post.url}}">{{post.title}}</a></h3>
+
+    <!-- <p>{{post.date | date: "%B %-d, %Y"}}</p> -->
+
+    {{post.excerpt}}
+
+    <p><a class="call-to-action" href="{{post.url}}">Read more</a></p>
   </div>
+{% endfor %}
 
-  </div><!--/row-->
-</div><!--/container-fluid-->
-
-
-</body>
-
-</html>
