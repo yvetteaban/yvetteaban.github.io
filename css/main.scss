@@ -282,29 +282,6 @@ a:hover {
 }
 
 /* homepage / landing page */
-// .home {
-//   text-align: left;
-
-//   .project-list { 
-//     margin-left: 0;
-//     padding-left: 0;
-//     li {
-//       line-height: 1.5em;
-//       list-style: none;
-
-//       a {
-//         color: $dark-gray;
-//         border-bottom: solid 1px rgba(85,85,85,.2);
-
-//         &:hover {
-//           color: $teal-color;
-//           text-decoration: none;
-//         }
-//       }
-//     }
-//   }
-// }
-
 .post-summary {
   border-bottom: 1px solid $gray-color-light;
   clear: both;
@@ -313,9 +290,13 @@ a:hover {
   padding-bottom: 20px;
 
   img {
-    //display: inline;
-    float: left;
     margin: 0 20px 0 0;
+
+    @media screen and (min-width: $on-palm){ 
+      float: left;
+      height: 200px;
+      margin: 0 20px 0 0;
+    }
   }
 }
 .post-meta {

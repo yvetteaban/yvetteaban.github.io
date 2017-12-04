@@ -6278,8 +6278,12 @@ a:hover {
   overflow: auto;
   padding-bottom: 20px; }
   .post-summary img {
-    float: left;
     margin: 0 20px 0 0; }
+    @media screen and (min-width: 600px) {
+      .post-summary img {
+        float: left;
+        height: 200px;
+        margin: 0 20px 0 0; } }
 
 .post-meta {
   color: #828282;
