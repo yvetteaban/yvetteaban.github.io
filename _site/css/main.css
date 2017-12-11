@@ -6311,3 +6311,7 @@ a:hover {
     margin: 0 0 40px; }
 .project-single img {
   border: 1px solid #e8e8e8; }
+
+.comments-wrapper {
+  border-top: 1px solid #e8e8e8;
+  margin-top: 30px; }
