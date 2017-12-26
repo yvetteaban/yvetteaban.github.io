@@ -276,6 +276,12 @@ a:hover {
     h3 > a {
       border-bottom: none;
     }
+
+    p {
+      img {
+        display: block;
+      }
+    }
   }  
 }
 .colon {
