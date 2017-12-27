@@ -6267,6 +6267,8 @@ a:hover {
     border-bottom: solid 1px rgba(85, 85, 85, 0.2); }
   .main .page-content h3 > a {
     border-bottom: none; }
+  .main .page-content p img {
+    display: block; }
 
 .colon {
   margin-top: 40px; }
