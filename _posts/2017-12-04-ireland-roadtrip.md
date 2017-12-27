@@ -13,9 +13,6 @@ We drove around the Ring of Kerry, but it took a wayyy longer than we had antici
 I think one of the highlights from our trip would have to be dressing up in cloaks and play sword-fighting at Castle Ward, where some of Game of Thrones was filmed. It was fun and silly way to spend a misty Irish afternoon.
 
 
-![Kilkenny]({{ site.baseurl }}/assets/ireland-kilkenny-yvetteaban.jpg)
-*Kilkenny, Ireland*
-
 ![Caragh River]({{ site.baseurl }}/assets/ireland-caraghriver-yvetteaban.jpg)
 *Caragh River; Ring of Kerry*
 
