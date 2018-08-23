@@ -82,22 +82,18 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: $serif-font;
 }
-.standout {
-  background-color: $teal-color-lighter;
-  padding: 0 3px;
-  &:hover {
-    background-color: $teal-color-darker;
-    @include fade;
-  }
-  a {
-    color: $white-color;
-    text-decoration: none;
-  }
-}
-.lighttext {
-  color: $gray-color;
-  font-family: $serif-font;
-}
+// .standout {
+//   background-color: $teal-color-lighter;
+//   padding: 0 3px;
+//   &:hover {
+//     background-color: $teal-color-darker;
+//     @include fade;
+//   }
+//   a {
+//     color: $white-color;
+//     text-decoration: none;
+//   }
+// }
 a, a:visited, a:active {
   color: $dark-gray;
   text-decoration: none;
@@ -112,6 +108,10 @@ a:hover {
 }
 ::selection {
   background-color: $teal-color;
+}
+.tags {
+  color: $gray-color;
+  font-family: $serif-font;
 }
 
 /* --------------------------------------------------- */
@@ -151,8 +151,9 @@ a:hover {
   }
 
   .sidebar-wrap {
-    padding: 40px 0;
+    color: $white-color;
     clear: both;
+    padding: 40px 0;
     text-align: center;
 
     @media screen and (min-width: $on-palm){ 
@@ -161,6 +162,7 @@ a:hover {
   }
   .name-card {
     color: $white-color;
+    padding-bottom: $spacing-unit;
 
     .avatar {
       background-color: $teal-color;
@@ -199,11 +201,9 @@ a:hover {
     padding: 0;
     text-align: center;
 
-    // @media screen and (min-width: $on-palm){
-    //   float: right;
-    // }
     li {
       list-style: none;
+      margin: 0 0 10px;
       padding: 0;
 
       @media screen and (min-width: $on-palm){
@@ -211,16 +211,16 @@ a:hover {
       }
 
       a {
+        border-radius: 5px;
         color: $white-color;
         font-size: 1.2em;
+        padding: $spacing-unit/4;
 
         &:hover {
+          background-color: $white-color;
           color: $gray-color-dark;
           text-decoration: none;
         }
-        // &.active {
-        //   border-bottom: 2px solid $teal-color;
-        // }
       }      
     }
   }
@@ -264,28 +264,26 @@ a:hover {
     flex: 1;
     padding: $spacing-unit 0;
 
-    @media screen and (min-width: $on-palm){ 
-      padding: $spacing-unit 40px;
+    h2 {
+      margin: 0 0 $spacing-unit;
     }
-
-    a {
-      border-bottom: solid 1px rgba(85,85,85,.2);
-    }
-
     h3 > a {
       border-bottom: none;
     }
-
     p {
       margin-bottom: 20px;
       img {
         display: block;
       }
     }
+
+    @media screen and (min-width: $on-palm){ 
+      padding: $spacing-unit 40px;
+    }
   }  
 }
 .colon {
-  margin-top: $spacing-unit*2;
+  margin: $spacing-unit 0 0;
 }
 
 /* homepage / landing page / blog list */
@@ -316,18 +314,51 @@ a:hover {
   font-size: 80%;
 }
 
+/* about page */
+.about, .project-single {
+    a {
+      border-bottom: solid 1px rgba(85,85,85,.4);
+    }  
+}
+
 /* projects landing page */
 .project-thumbs {
   list-style: none;
   margin-left: 0;
   li {
+    border-bottom: 1px solid $gray-color-light;
+    clear: both;
     margin-bottom: $spacing-unit;
+    overflow: auto;
+    padding-bottom: 20px;
     img {
       margin-bottom: $spacing-unit;
       &:hover {
         background-color: $dark-gray;
         opacity: 0.8;
       }
+    }
+    h3 {
+      margin-top: 0;
+    }
+  }
+  .proj-image, .proj-excerpt {
+    @media screen and (min-width: $on-palm) {
+      float: left;
+    }
+  }
+  .proj-image {
+    @media screen and (min-width: $on-palm) {
+      margin-right: $spacing-unit;
+      width: 35%;
+    }
+  }
+  .proj-excerpt {
+    p {
+      font-size: 14px;
+    }
+    @media screen and (min-width: $on-palm) {
+      width: 60%;
     }
   }
 }  
@@ -350,4 +381,17 @@ a:hover {
 .comments-wrapper {
   border-top: 1px solid $gray-color-light;
   margin-top: 30px;
+}
+
+a.call-to-action {
+  background-color: $teal-color-lighter;
+  border-bottom: none !important;
+  color: $white-color;
+  text-decoration: none;
+  padding: 0 3px;
+
+  &:hover {
+    background-color: $teal-color-darker;
+    @include fade;
+  }
 }
