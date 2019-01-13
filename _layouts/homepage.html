@@ -21,8 +21,10 @@ layout: default
     {% endif %}
     {% endfor %}
 
-    <h3><a href="{{post.url}}">{{post.title}}</a></h3>
-    <p>{{post.date | date: "%B %-d, %Y"}}</p>
+    <header class="post-header">
+        <h3><a href="{{post.url}}">{{post.title}}</a></h3>
+        <p>{{post.date | date: "%B %-d, %Y"}}</p>
+    </header>
 
     {{post.excerpt}}
 
