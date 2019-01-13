@@ -6343,9 +6343,13 @@ a:hover {
 a.call-to-action {
   background-color: #00b5d4;
   border-bottom: none !important;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   color: #ffffff;
+  font-size: 12px;
   text-decoration: none;
-  padding: 0 3px; }
+  padding: 0 5px; }
   a.call-to-action:hover {
     background-color: #005e6e;
     -webkit-transition-duration: 0.3s;
