@@ -313,6 +313,11 @@ a:hover {
   color: $gray-color;
   font-size: 80%;
 }
+.post-header {
+  h3 {
+    margin-bottom: 0;
+  }
+}
 
 /* about page */
 .about, .project-single {
