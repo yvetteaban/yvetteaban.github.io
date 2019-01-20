@@ -405,3 +405,12 @@ a.call-to-action {
     @include fade;
   }
 }
+
+#contact-ya {
+  section {
+    margin-bottom: 20px;
+  }
+  input, textarea {
+    width: 100%;
+  }
+}
