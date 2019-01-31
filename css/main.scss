@@ -103,9 +103,6 @@ a:hover {
 /* --------------------------------- */
 /* NAVIGATION */
 /* --------------------------------- */
-.site-nav-wrapper, .site-footer-wrapper {
-  background: #ccc;
-}
 .site-nav, .site-footer {
   clear: both;
   overflow: auto;
@@ -122,8 +119,10 @@ a:hover {
       padding: 0 $spacing-unit;
     }
   }
+  p {
+    margin: 0;
+  }
 }
-
 .site-nav {
   .site-title {
     display: block;
@@ -136,7 +135,6 @@ a:hover {
       text-align: left;
     }
   }
-
   ul {
     @media screen and (min-width: $on-laptop) {
       float: right;
@@ -146,14 +144,26 @@ a:hover {
     }
   }
 }
-
-.home {
-  .intro {
-    margin-bottom: $spacing-unit; 
-    padding: $spacing-unit*4 $spacing-unit;
-    text-align: center;
+.site-footer-wrapper {
+  background: #ccc;
+  .social {
+    margin-bottom: $spacing-unit;
   }
 }
+
+
+  .intro {
+    background: url(../assets/bg-yvetteaban.jpg) #222 center center;
+    margin-bottom: $spacing-unit; 
+    padding: $spacing-unit*6 $spacing-unit;
+    text-align: center;
+
+    h2 {
+      color: #fff;
+      margin: 0;
+    }
+  }
+
 
 .project-card {
   margin-bottom: $spacing-unit;

@@ -6131,9 +6131,6 @@ a:hover {
 /* --------------------------------- */
 /* NAVIGATION */
 /* --------------------------------- */
-.site-nav-wrapper, .site-footer-wrapper {
-  background: #ccc; }
-
 .site-nav, .site-footer {
   clear: both;
   overflow: auto;
@@ -6146,6 +6143,8 @@ a:hover {
       display: inline-block;
       list-style: none;
       padding: 0 20px; }
+  .site-nav p, .site-footer p {
+    margin: 0; }
 
 .site-nav .site-title {
   display: block;
@@ -6162,10 +6161,19 @@ a:hover {
 .site-nav ul li {
   padding: 0 20px; }
 
-.home .intro {
+.site-footer-wrapper {
+  background: #ccc; }
+  .site-footer-wrapper .social {
+    margin-bottom: 20px; }
+
+.intro {
+  background: url(../assets/bg-yvetteaban.jpg) #222 center center;
   margin-bottom: 20px;
-  padding: 80px 20px;
+  padding: 120px 20px;
   text-align: center; }
+  .intro h2 {
+    color: #fff;
+    margin: 0; }
 
 .project-card {
   margin-bottom: 20px;
