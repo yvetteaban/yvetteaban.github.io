@@ -127,11 +127,12 @@ a:hover {
 .site-nav {
   .site-title {
     display: block;
+    margin-bottom: $spacing-unit;
     text-align: center;
-    text-transform: uppercase;
 
     @media screen and (min-width: $on-laptop) {
       float: left;
+      margin-bottom: 0;
       text-align: left;
     }
   }
@@ -148,17 +149,61 @@ a:hover {
 
 .home {
   .intro {
-    background-color: #333;
     margin-bottom: $spacing-unit; 
-    padding: $spacing-unit*4 0;
+    padding: $spacing-unit*4 $spacing-unit;
     text-align: center;
   }
 }
 
 .project-card {
+  margin-bottom: $spacing-unit;
+  position: relative;
+
   @media screen and (min-width: $on-laptop) {
     float: left;
   }
+
+  a {
+    display: inline-block;
+  }
+
+  .card {
+    display: block;
+    position: relative;
+
+    .project-description {
+      background-color: rgba(255,255,255,1);
+      //padding: 8px 32px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      text-align: center;  
+      transition-property: opacity;
+      transition-timing-function: ease-in-out;
+      transition-duration: .2s;
+
+      &:hover {
+        border: 10px solid $teal-color;
+        opacity: 100;
+      }
+    }
+  }
+
+  h4 {
+    margin: .4em 0 0;
+  }
+
 }
 
 .call-to-action {
