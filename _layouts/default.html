@@ -5,7 +5,7 @@
 
 <body>
 
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
 		<div class="site-nav-wrapper col-sm-12 col-md-12">
 			{% include nav.html %}
@@ -18,13 +18,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">	
-		<div class="site-footer-wrapper col-sm-12 col-md-12">
-			{% include footer.html %}
-		</div>
-	</div>	
-</div><!--/container-fluid-->
+</div>
 
+<div class="site-footer-wrapper">
+	{% include footer.html %}
+</div>
 
 </body>
 </html>

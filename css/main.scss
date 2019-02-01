@@ -16,23 +16,23 @@ $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
+// Grays
 $gray-color:       #828282;
 $gray-color-light: lighten($gray-color, 40%);
 $gray-color-dark:  darken($gray-color, 25%);
+$dark-gray: #666666;
+$dark-gray-lighter: lighten($dark-gray, 40%);
+$darker-gray: #333333;
 
-// My Colors
+// Colors
 $white-color: #ffffff;
 $teal-color: #009fba;
 $teal-color-lighter: lighten($teal-color, 5%);
 $teal-color-darker: darken($teal-color, 15%);
-$dark-gray: #666666;
-$dark-gray-lighter: lighten($dark-gray, 40%);
-$darker-gray: #333333;
 $finehumans-yellow: #CFC329;
 
 //Width of the content area
 $content-width:    1170px;
-
 $on-palm:          600px;
 $on-laptop:        800px;
 
@@ -100,6 +100,7 @@ a:hover {
   font-family: $serif-font;
 }
 
+
 /* --------------------------------- */
 /* NAVIGATION */
 /* --------------------------------- */
@@ -123,6 +124,7 @@ a:hover {
     margin: 0;
   }
 }
+
 .site-nav {
   .site-title {
     display: block;
@@ -141,79 +143,25 @@ a:hover {
     }
     li {
       padding: 0 $spacing-unit;
+
+      a {
+        color: $gray-color;
+
+        &:hover {
+          border-bottom: 3px solid $teal-color;
+          color: $teal-color;
+          padding-bottom: .4em;
+        }
+      }
     }
   }
 }
+
 .site-footer-wrapper {
   background: #ccc;
   .social {
     margin-bottom: $spacing-unit;
   }
-}
-
-
-  .intro {
-    background: url(../assets/bg-yvetteaban.jpg) #222 center center;
-    margin-bottom: $spacing-unit; 
-    padding: $spacing-unit*6 $spacing-unit;
-    text-align: center;
-
-    h2 {
-      color: #fff;
-      margin: 0;
-    }
-  }
-
-
-.project-card {
-  margin-bottom: $spacing-unit;
-  position: relative;
-
-  @media screen and (min-width: $on-laptop) {
-    float: left;
-  }
-
-  a {
-    display: inline-block;
-  }
-
-  .card {
-    display: block;
-    position: relative;
-
-    .project-description {
-      background-color: rgba(255,255,255,1);
-      //padding: 8px 32px;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      display: block;
-      margin: 0;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      line-height: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      text-align: center;  
-      transition-property: opacity;
-      transition-timing-function: ease-in-out;
-      transition-duration: .2s;
-
-      &:hover {
-        border: 10px solid $teal-color;
-        opacity: 100;
-      }
-    }
-  }
-
-  h4 {
-    margin: .4em 0 0;
-  }
-
 }
 
 .call-to-action {
@@ -228,6 +176,36 @@ a:hover {
     color: #fff;
   }
 }
+
+.intro {
+  margin-bottom: $spacing-unit; 
+  padding: $spacing-unit*6 $spacing-unit;
+  text-align: center;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.project-thumbnail {
+  margin-bottom: $spacing-unit;
+  position: relative;
+
+  @media screen and (min-width: $on-laptop) {
+    float: left;
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  .project-description {
+    h4 {
+      margin: .75em 0 0;
+    }
+  }
+}
+
 
 
 
