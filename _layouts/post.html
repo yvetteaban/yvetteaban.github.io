@@ -5,7 +5,7 @@
 
 <body>
 
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
 		<div class="site-nav-wrapper col-sm-12 col-md-12">
 			{% include nav.html %}
@@ -16,7 +16,7 @@
 			<div class="post page-content">
 				<header class="post-header">
 					<h1 class="post-title">{{ page.title }}</h1>
-					<p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+					<p class="post-meta"><small>{{ page.date | date: "%B %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</small></p>
 				</header>
 
 				{{ content }}
@@ -25,12 +25,11 @@
 			</div>
 		</div>
 	</div>	
-	<div class="row">	
-		<div class="site-footer-wrapper col-sm-12 col-md-12">
-			{% include footer.html %}
-		</div>
-	</div>	
-</div><!--/container-fluid-->
+</div>
+
+<div class="site-footer-wrapper col-sm-12 col-md-12">
+	{% include footer.html %}
+</div>
 
 </body>
 </html>

@@ -6149,7 +6149,8 @@ a:hover {
 .site-nav .site-title {
   display: block;
   margin-bottom: 20px;
-  text-align: center; }
+  text-align: center;
+  text-transform: uppercase; }
   @media screen and (min-width: 800px) {
     .site-nav .site-title {
       float: left;
@@ -6167,11 +6168,53 @@ a:hover {
       color: #009fba;
       padding-bottom: .4em; }
 
-.site-footer-wrapper {
-  background: #ccc; }
-  .site-footer-wrapper .social {
-    margin-bottom: 20px; }
+.banner {
+  margin-bottom: 20px;
+  padding: 80px 20px;
+  text-align: center; }
+  .banner h2 {
+    margin: 0; }
 
+.page-content {
+  padding-bottom: 40px;
+  padding-top: 40px;
+  overflow: auto; }
+  .page-content a {
+    border-bottom: 1px solid rgba(43, 43, 43, 0.3); }
+
+/* project list */
+.project-thumbnail {
+  margin-bottom: 20px;
+  position: relative; }
+  @media screen and (min-width: 800px) {
+    .project-thumbnail {
+      float: left; } }
+  .project-thumbnail a {
+    border-bottom: none;
+    display: inline-block; }
+  .project-thumbnail .project-description h3 {
+    margin: .5em 0 0; }
+    .project-thumbnail .project-description h3 a {
+      border-bottom: none; }
+  .project-thumbnail .project-description a {
+    border-bottom: 1px solid #999; }
+
+/* blog posts */
+.display-flex {
+  display: flex;
+  flex-wrap: wrap; }
+
+.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column; }
+
+.post-header h3 {
+  margin-top: 0;
+  margin-bottom: 5px; }
+  .post-header h3 a {
+    border-bottom: none; }
+
+/* read more button */
 .call-to-action {
   border: 1px solid #999;
   -webkit-border-radius: 5px;
@@ -6182,20 +6225,10 @@ a:hover {
     background-color: #009fba;
     color: #fff; }
 
-.intro {
-  margin-bottom: 20px;
-  padding: 120px 20px;
-  text-align: center; }
-  .intro h2 {
-    margin: 0; }
-
-.project-thumbnail {
-  margin-bottom: 20px;
-  position: relative; }
-  @media screen and (min-width: 800px) {
-    .project-thumbnail {
-      float: left; } }
-  .project-thumbnail a {
-    display: inline-block; }
-  .project-thumbnail .project-description h4 {
-    margin: .75em 0 0; }
+/* footer */
+.site-footer-wrapper {
+  background: #ccc; }
+  .site-footer-wrapper .social {
+    margin-bottom: 20px; }
+    .site-footer-wrapper .social a {
+      font-size: 1.5em; }

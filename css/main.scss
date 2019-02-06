@@ -130,6 +130,7 @@ a:hover {
     display: block;
     margin-bottom: $spacing-unit;
     text-align: center;
+    text-transform: uppercase;
 
     @media screen and (min-width: $on-laptop) {
       float: left;
@@ -157,13 +158,73 @@ a:hover {
   }
 }
 
-.site-footer-wrapper {
-  background: #ccc;
-  .social {
-    margin-bottom: $spacing-unit;
+.banner {
+  margin-bottom: $spacing-unit; 
+  padding: $spacing-unit*4 $spacing-unit;
+  text-align: center;
+
+  h2 {
+    margin: 0;
   }
 }
 
+.page-content {
+  padding-bottom: $spacing-unit*2;
+  padding-top: $spacing-unit*2;
+  overflow: auto;
+  a {
+    border-bottom: 1px solid rgba(43,43,43,.3);
+  }
+}
+
+/* project list */
+.project-thumbnail {
+  margin-bottom: $spacing-unit;
+  position: relative;
+
+  @media screen and (min-width: $on-laptop) {
+    float: left;
+  }
+
+  a {
+    border-bottom: none;
+    display: inline-block;
+  }
+
+  .project-description {
+    h3 {
+      margin: .5em 0 0;
+      a {
+        border-bottom: none;
+      }
+    }
+    a {
+      border-bottom: 1px solid #999;
+    }
+  }
+}
+
+/* blog posts */
+.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+.post-header {
+  h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+
+    a {
+      border-bottom: none;
+    }
+  }
+}
+
+/* read more button */
 .call-to-action {
   border: 1px solid #999;
   -webkit-border-radius: 5px;
@@ -177,36 +238,16 @@ a:hover {
   }
 }
 
-.intro {
-  margin-bottom: $spacing-unit; 
-  padding: $spacing-unit*6 $spacing-unit;
-  text-align: center;
-
-  h2 {
-    margin: 0;
-  }
-}
-
-.project-thumbnail {
-  margin-bottom: $spacing-unit;
-  position: relative;
-
-  @media screen and (min-width: $on-laptop) {
-    float: left;
-  }
-
-  a {
-    display: inline-block;
-  }
-
-  .project-description {
-    h4 {
-      margin: .75em 0 0;
+/* footer */
+.site-footer-wrapper {
+  background: #ccc;
+  .social {
+    margin-bottom: $spacing-unit;
+    a {
+      font-size: 1.5em;
     }
   }
 }
-
-
 
 
 
