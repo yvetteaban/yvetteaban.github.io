@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: 'Open Sans', sans-serif;
+$base-font-family: 'Lato', sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.6;
@@ -64,6 +64,7 @@ $on-laptop:        800px;
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Sans+Pro:400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
 html {
   height: 100%;
@@ -177,31 +178,43 @@ a:hover {
   }
 }
 
-/* project list */
+/* homepage - project list */
+.projects-wrapper {
+  clear: both;
+  overflow: auto;
+}
 .project-thumbnail {
   margin-bottom: $spacing-unit;
   position: relative;
 
   @media screen and (min-width: $on-laptop) {
     float: left;
+
+    &.floatright {
+      float: right;
+    }
   }
 
   a {
     border-bottom: none;
     display: inline-block;
   }
+  
 
-  .project-description {
-    h3 {
-      margin: .5em 0 0;
-      a {
-        border-bottom: none;
-      }
-    }
-    a {
-      border-bottom: 1px solid #999;
-    }
-  }
+  // .project-description {
+  //   h3 {
+  //     margin: .5em 0 0;
+  //     a {
+  //       border-bottom: none;
+  //     }
+  //   }
+  //   a {
+  //     border-bottom: 1px solid #999;
+  //   }
+  // }
+}
+.posts-wrapper {
+  margin-bottom: $spacing-unit;
 }
 
 /* blog posts */

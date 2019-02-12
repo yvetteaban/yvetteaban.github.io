@@ -4,6 +4,7 @@
  */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Sans+Pro:400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -14,7 +15,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 16px;
   line-height: 1.6;
   font-weight: 300;
@@ -6096,7 +6097,7 @@ html {
 
 body {
   color: #666666;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 16px;
   min-height: 100%;
   display: flex;
@@ -6182,22 +6183,25 @@ a:hover {
   .page-content a {
     border-bottom: 1px solid rgba(43, 43, 43, 0.3); }
 
-/* project list */
+/* homepage - project list */
+.projects-wrapper {
+  clear: both;
+  overflow: auto; }
+
 .project-thumbnail {
   margin-bottom: 20px;
   position: relative; }
   @media screen and (min-width: 800px) {
     .project-thumbnail {
-      float: left; } }
+      float: left; }
+      .project-thumbnail.floatright {
+        float: right; } }
   .project-thumbnail a {
     border-bottom: none;
     display: inline-block; }
-  .project-thumbnail .project-description h3 {
-    margin: .5em 0 0; }
-    .project-thumbnail .project-description h3 a {
-      border-bottom: none; }
-  .project-thumbnail .project-description a {
-    border-bottom: 1px solid #999; }
+
+.posts-wrapper {
+  margin-bottom: 20px; }
 
 /* blog posts */
 .display-flex {
