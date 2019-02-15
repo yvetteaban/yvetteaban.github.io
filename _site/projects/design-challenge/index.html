@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Yvette Aban | Web & UI Design</title>
+  <title>Yvette Aban  </title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/main.css">
@@ -39,10 +39,113 @@
 			<div class="page-content">
 				<div class="project-single">
 
-	<h2>Projectly</h2>
-	<p class="tags">ui design, design challenge</p>
+	<h2>Project Management Application</h2>
+	<p class="tags">ui design</p>
 
-	<p>For this challenge, the client wanted a project management desktop app.</p>
+	<p>For this particular challenge, I had to design an interface based on the following parameters:</p>
+
+	<h3>Overview</h3>
+	<p>The view that we are designing provides an overview of work-in-progress so that the entire team working on a project has a clear sense of which stage of work each tasks currently stands.</p> 
+	
+	<p>Tasks are represented by cards of information (“tickets”) and each column in the view (“swimlanes”) represents a stage of work. Tickets begin in the left-most column and are dragged from left to right as work progresses.</p> 
+
+	<h3>Global Navigation (vertical)</h3>
+	<p>The left-most, vertical menubar will be present on every view of this application and provides users with top-level navigation to switch between different sections of the application.</p> 
+	<p>Each menu item is represented by an icon and a label, as follows:</p> 
+	<ul>
+		<li>Work</li> 
+		<li>Plan</li> 
+		<li>Stats</li> 
+		<li>Documents</li> 
+		<li>Users</li> 
+		<li>Settings</li>
+	</ul>
+	<p>“Work” is the section currently selected in this view and represented by the wireframe.</p>
+
+	<p><strong>Design Note:</strong> Please choose icons for each menu item, with “Work” shown in a selected state and “Plan” shown in a hover state. Order and place the menu items as you see fit on the menubar. </p>	
+
+	<h3>Global Navigation (horizontal)</h3> 
+
+	<h4>Notifications</h4> 
+
+	<p>The top-most horizontal navigation (from left to right):</p>
+	<ul> 
+		<li>On the far left, users may be alerted to two types of events in the platform:</li> 
+		<li>Messages</li> 
+		<li>To Do</li> 
+		<li>Messages badges:</li> 
+		<li>If the user has received a Message that is unread, a flag is displayed.</li> 
+		<li>To Do badges:</li> 
+		<li>If a user has no To Do items, there is no badge.</li> 
+		<li>If a user has To Do items, show the number of To Do items.</li> 
+		<li>If a To Do item is overdue, indicate the number overdue.</li> 
+	</ul>
+
+	<h4>Current User</h4>
+
+	<p>The far right (just to the left of the hamburger menu), displays information about the current logged in user, including:</p> 
+	
+	<ul>
+		<li>Avatar</li> 
+		<li>Name</li> 
+		<li>Role (Designer)</li> 
+		<li>Status (Online, Away, Offline)</li> 
+	</ul>	
+
+	<h4>Hamburger Menu</h4>
+
+	<p>In the far top-right corner of the screen, there is a menu button that will open a right-hand drawer.</p> 
+
+	<p>Design Note: Don’t worry about the menu drawer itself, we just need to show the affordance for accessing it.</p> 
+
+	<h3>Project Navigation (horizontal)</h3> 
+
+	<p>Left-justified, users can find information about the project they are currently viewing. All tickets and swim lanes that appear beneath fall under this project.</p> 
+
+	<p>Project information to display includes:</p> 
+
+	<ul>
+		<li>Title</li> 
+		<li>Short Description</li> 
+		<li>Team Assigned to the Project</li> 
+		<li>Calendar of project’s due date</li> 
+	</ul>
+
+	<p>Right-justified, display the avatars for each user that has been invited to participate in the project, as well as an affordance for inviting addition collaborators to the project.</p> 
+
+	<h3>Workspace</h3> 
+	<h4>Project Swimlanes</h4>
+
+	<p>There are four swim lanes built out in this example project:</p> 
+	<ul>
+		<li>Backlog</li> 
+		<li>In Progress</li> 
+		<li>Review</li> 
+		<li>Done</li> 
+	</ul>	
+	<p>The label of each swim lane can be edited by the user, and also includes the number of tickets currently in each swim lane. 
+On the far right, users may add an additional (fifth in this example) swim lane.</p> 
+
+	<h4>Tickets</h4> 
+
+	All tickets display the following information: 
+	<ul>
+		<li>Task Name</li> 
+		<li>Task Type (Bug, Feature, Improvement, Design)</li> 
+		<li>Task Description</li> 
+		<li>Due Date</li> 
+		<li>Team Member assigned to the ticket</li> 
+	</ul>
+
+	<p>Tickets may also include subtasks, which will be displayed nested underneath the parent ticket. 
+Subtasks display the following information:</p> 
+	
+	<ul>
+		<li>Subtask Name</li> 
+		<li>Due Date</li> 
+	</ul>
+
+	<p>Design Note: Please show tickets in the following states: Selected, unselected, and with/without subtasks. Finally, please roughly show how a ticket would appear in the process of being dragged from one swim lane to another.</p> 
 
 	<img src="/assets/pdc-aban.png" alt="Projectly" />
 
