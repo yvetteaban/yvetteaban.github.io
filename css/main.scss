@@ -221,23 +221,14 @@ a:hover {
     }
   }
 
-  a {
-    border-bottom: none;
-    display: inline-block;
-  }
-
-
-  // .project-description {
-  //   h3 {
-  //     margin: .5em 0 0;
-  //     a {
-  //       border-bottom: none;
-  //     }
-  //   }
-  //   a {
-  //     border-bottom: 1px solid #999;
+  // a {
+  //   border-bottom: none;
+  //   display: inline-block;
+  //   &.call-to-action {
+  //     border-bottom: 1px solid rgba(43,43,43,.3);
   //   }
   // }
+
 }
 .posts-wrapper {
   margin-bottom: $spacing-unit;
@@ -265,7 +256,7 @@ a:hover {
 
 /* read more button */
 .call-to-action {
-  border: 1px solid #999;
+  border: 1px solid rgba(43,43,43,.3);
   -webkit-border-radius: 5px;
   border-radius: 5px;  
   display: inline-block;

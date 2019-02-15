@@ -6217,9 +6217,6 @@ a:hover {
       float: left; }
       .project-thumbnail.floatright {
         float: right; } }
-  .project-thumbnail a {
-    border-bottom: none;
-    display: inline-block; }
 
 .posts-wrapper {
   margin-bottom: 20px; }
@@ -6241,7 +6238,7 @@ a:hover {
 
 /* read more button */
 .call-to-action {
-  border: 1px solid #999;
+  border: 1px solid rgba(43, 43, 43, 0.3);
   -webkit-border-radius: 5px;
   border-radius: 5px;
   display: inline-block;
