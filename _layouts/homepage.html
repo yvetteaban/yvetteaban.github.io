@@ -1,34 +1,88 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
+{% include head.html %}
 
-{% for post in site.posts %}
-  <div class="post-summary">
+<body>
 
-    <!-- {% assign image = post.images[0] %} -->
+<div class="container">
+    <div class="row">
+        <div class="site-nav-wrapper col-sm-12 col-md-12">
+            {% include nav.html %}
+        </div>  
+    </div>
+</div><!--/container-->
 
-    {% assign foundImage = 0 %}
-    {% assign images = post.content | split:"<img " %}
-    {% for image in images %}
-    {% if image contains 'src' %}
+<div id="home-page">
 
-        {% if foundImage == 0 %}
-            {% assign html = image | split:"/>" | first %}
-            <p><a href="{{post.url}}"><img {{ html }} /></a></p>
-            {% assign foundImage = 1 %}
-        {% endif %}
-    {% endif %}
-    {% endfor %}
+    <div class="hero">
+        <h2>Web &amp; UI Designer</h2>
+    </div>
 
-    <header class="post-header">
-        <h3><a href="{{post.url}}">{{post.title}}</a></h3>
-        <p>{{post.date | date: "%B %-d, %Y"}}</p>
-    </header>
+<div class="container">
+    <div class="projects-wrapper">    
+        <h3>Projects</h3>
 
-    {{post.excerpt}}
+        <div class="project-thumbnail">
+            <a href="/projects/braddock-youth-project/" title="Braddock Youth Project">
+                <img src="{{ site.baseurl }}/assets/proj-byp.png" alt="Braddock Youth Project flyers">
+            </a>
+            <div class="project-description">
+                <p><strong>Braddock Youth Project</strong> - graphic design, screen printing</p>
+            </div>
+        </div>
 
-    <p><a class="call-to-action" href="{{post.url}}">Read more</a></p>
-  </div>
-{% endfor %}
+        <div class="project-thumbnail floatright">
+            <a href="/projects/design-challenge" title="Design Challenge">
+                <img src="{{ site.baseurl }}/assets/proj-projectly.png" alt="Design Challenge">
+            </a>
+            <div class="project-description">
+                <p><strong>Design Challenge</strong> - ui design</p>
+            </div>
+        </div>
 
+        <div class="project-thumbnail">
+            <a href="/projects/imagine-careers/" title="Imagine Careers">
+                <img src="{{ site.baseurl }}/assets/proj-imaginecareers.png" alt="Imagine Careers">
+            </a>
+            <div class="project-description">
+                <p><strong>Imagine Careers</strong> - web and ui design, front end development</p>
+            </div>
+        </div>
+
+        <div class="project-thumbnail floatright">
+            <a href="/projects/fine-humans/" title="Fine Humans">
+                <img src="{{ site.baseurl }}/assets/proj-finehumans.png" alt="Fine Humans">
+            </a>
+            <div class="project-description">
+                <p><strong>Fine Humans</strong> - wordpress development</p>
+            </div>  
+        </div> 
+    </div><!--/project-wrapper -->
+</div><!--/container-->
+
+<!--         <div class="posts-wrapper">
+        <h2>Latest Post</h2>
+        {% for post in site.posts limit:1 %}
+            {% assign foundImage = 0 %}
+            {% assign images = post.content | split:"<img " %}
+            {% for image in images %}
+            {% if image contains 'src' %}
+                {% if foundImage == 0 %}
+                    {% assign html = image | split:"/>" | first %}
+                    <p><a href="{{post.url}}"><img {{ html }} /></a></p>
+                    {% assign foundImage = 1 %}
+                {% endif %}
+            {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>   -->  
+
+</div><!--/home-page -->
+
+<div class="site-footer-wrapper">
+    {% include footer.html %}
+</div>
+
+</body>
+</html>

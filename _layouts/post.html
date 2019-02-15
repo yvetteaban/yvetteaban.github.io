@@ -5,35 +5,31 @@
 
 <body>
 
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
-
-		<div class="col-sm-3 col-md-3 left-sidebar">
-			{% include sidebar.html %}
-		</div>
-
-	<div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main">
-
-		<div class="post">
-
-			<div class="page-content">
+		<div class="site-nav-wrapper col-sm-12 col-md-12">
+			{% include nav.html %}
+		</div>	
+	</div>
+	<div class="row">
+		<div class="content-wrapper col-sm-12 col-md-12">
+			<div class="post page-content">
 				<header class="post-header">
 					<h1 class="post-title">{{ page.title }}</h1>
-					<p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+					<p class="post-meta"><small>{{ page.date | date: "%B %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</small></p>
 				</header>
 
 				{{ content }}
 
 				{% include comments.html %} 
 			</div>
-
 		</div>
+	</div>	
+</div>
 
-	</div>
-
-	</div><!--/row-->
-</div><!--/container-fluid-->
+<div class="site-footer-wrapper col-sm-12 col-md-12">
+	{% include footer.html %}
+</div>
 
 </body>
-
 </html>

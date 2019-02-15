@@ -12,10 +12,9 @@ Luckily, the winds subsided and we were able to climb uninterrupted for the the 
 
 
 ![Red Rock Canyon]({{ site.baseurl }}/assets/redrocks-yvette-aban-01.jpg)
-*Red Rocks, Nevada.*
+
 
 ![Red Rock Canyon]({{ site.baseurl }}/assets/redrocks-yvette-aban-02.jpg)
-*Red Rocks, Nevada.*
+
 
 ![Climbing at Red Rock Canyon]({{ site.baseurl }}/assets/redrocks-climbing-viagrafalls.jpg)
-*Carl on Viagra Falls (5.11d); Red Rocks.*

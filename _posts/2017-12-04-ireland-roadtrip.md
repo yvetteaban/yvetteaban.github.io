@@ -14,16 +14,15 @@ I think one of the highlights from our trip would have to be dressing up in cloa
 
 
 ![Caragh River]({{ site.baseurl }}/assets/ireland-caraghriver-yvetteaban.jpg)
-*Caragh River; Ring of Kerry*
+
 
 ![Ballinskellig Castle]({{ site.baseurl }}/assets/ireland-skellig-yvetteaban.jpg)
-*Ballinskelligs Castle; Ring of Kerry*
+
 
 ![Ballinskellig Castle Above]({{ site.baseurl }}/assets/ireland-ballinskellig-yvetteaban.jpg)
-*On top of Ballinskelligs Castle; Ring of Kerry*
+
 
 ![Cliffs of Moher]({{ site.baseurl }}/assets/ireland-cliffs-yvetteaban.jpg)
-*Cliffs of Moher*
+
 
 ![Giants Causeway]({{ site.baseurl }}/assets/ireland-giantscauseway-yvetteaban.jpg)
-*Giant's Causeway, Northern Ireland*
