@@ -134,10 +134,9 @@ a:hover {
     display: block;
     margin-bottom: $spacing-unit;
     text-align: center;
-    text-transform: uppercase;
 
     a {
-      color: $violet;
+      //color: $violet;
       font-size: 2em;
       font-weight: 600;
       letter-spacing: 1px;
@@ -158,7 +157,7 @@ a:hover {
 
       a {
         color: $gray-color;
-        text-transform: uppercase;
+        //text-transform: uppercase;
 
         &:hover {
           border-bottom: 3px solid $violet;

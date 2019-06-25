@@ -6145,10 +6145,8 @@ a:hover {
   .site-nav .site-title {
     display: block;
     margin-bottom: 20px;
-    text-align: center;
-    text-transform: uppercase; }
+    text-align: center; }
     .site-nav .site-title a {
-      color: #9179BA;
       font-size: 2em;
       font-weight: 600;
       letter-spacing: 1px; }
@@ -6163,8 +6161,7 @@ a:hover {
   .site-nav ul li {
     padding: 0 20px; }
     .site-nav ul li a {
-      color: #828282;
-      text-transform: uppercase; }
+      color: #828282; }
       .site-nav ul li a:hover {
         border-bottom: 3px solid #9179BA;
         color: #9179BA;
