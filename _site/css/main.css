@@ -2,8 +2,8 @@
 /**
  * Reset some basic elements
  */
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=swap");
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -15,12 +15,12 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Geologica", sans-serif;
   font-size: 16px;
   line-height: 1.6;
   font-weight: 300;
-  color: #111;
-  background-color: #fdfdfd;
+  color: #000;
+  background-color: #fff;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -83,7 +83,7 @@ a:visited {
   color: #1756a9;
 }
 a:hover {
-  color: #111;
+  color: #000;
   text-decoration: underline;
 }
 
@@ -91,8 +91,8 @@ a:hover {
  * Blockquotes
  */
 blockquote {
-  color: #828282;
-  border-left: 4px solid #e8e8e8;
+  color: #808080;
+  border-left: 4px solid #e6e6e6;
   padding-left: 10px;
   font-size: 18px;
   letter-spacing: -1px;
@@ -108,7 +108,7 @@ blockquote > :last-child {
 pre,
 code {
   font-size: 15px;
-  border: 1px solid #e8e8e8;
+  border: 1px solid #e6e6e6;
   border-radius: 3px;
   background-color: #eef;
 }
@@ -166,7 +166,7 @@ pre > code {
   vertical-align: middle;
 }
 .icon > svg path {
-  fill: #828282;
+  fill: #808080;
 }
 
 /**
@@ -1750,7 +1750,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #111;
+  color: #000;
   background-color: #fff;
 }
 
@@ -3736,7 +3736,7 @@ select[multiple].input-lg,
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #515151;
+  color: #404040;
 }
 
 @media (min-width: 768px) {
@@ -5694,7 +5694,7 @@ a.badge:hover, a.badge:focus {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #111;
+  color: #000;
 }
 
 a.thumbnail:hover,
@@ -7501,13 +7501,11 @@ html {
 }
 
 body {
-  color: #333333;
-  font-family: "Lato", sans-serif;
+  font-family: "Geologica", sans-serif;
   font-size: 16px;
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  line-height: 1.6em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -7515,12 +7513,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a, a:visited {
-  color: #333333;
   text-decoration: underline;
 }
 
 a:hover {
-  color: #6a4e98;
+  color: #4807b1;
   text-decoration: none;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
@@ -7537,7 +7534,7 @@ a:hover {
 }
 
 .tags {
-  color: #828282;
+  color: #808080;
   font-family: "Roboto Slab", serif;
 }
 
@@ -7547,13 +7544,21 @@ a:hover {
 .site-nav-wrapper {
   margin-bottom: 20px;
 }
-
-.site-nav, .site-footer {
-  clear: both;
-  overflow: auto;
-  padding: 20px 0;
-  text-align: center;
+@media screen and (min-width: 800px) {
+  .site-nav-wrapper {
+    margin-bottom: 80px;
+  }
 }
+
+.site-footer-wrapper {
+  margin-top: 40px;
+}
+@media screen and (min-width: 800px) {
+  .site-footer-wrapper {
+    margin-top: 80px;
+  }
+}
+
 .site-nav ul, .site-footer ul {
   list-style: none;
   margin: 0;
@@ -7562,25 +7567,32 @@ a:hover {
   list-style: none;
   padding: 0 20px;
 }
-.site-nav p, .site-footer p {
-  margin: 0;
-}
 .site-nav a, .site-footer a {
+  display: block;
   text-decoration: none;
 }
 
 .site-nav {
-  padding-top: 40px;
-}
-.site-nav .site-title {
-  display: block;
-  margin-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
   text-align: center;
 }
-.site-nav .site-title a {
-  font-size: 2em;
-  font-weight: 600;
-  letter-spacing: 1px;
+.site-nav a {
+  color: #000;
+  font-size: 16px;
+  margin: 0 -0.25rem;
+  padding: 0 0.25rem;
+  background: linear-gradient(0deg, #7059FB, #7059FB) no-repeat right bottom/0 var(--bg-h);
+  transition: background-size 350ms;
+  --bg-h: 100%;
+}
+.site-nav a:hover {
+  background-size: 100% var(--bg-h);
+  background-position-x: left;
+}
+.site-nav .site-title {
+  margin-bottom: 20px;
+  text-align: center;
 }
 @media screen and (min-width: 800px) {
   .site-nav .site-title {
@@ -7588,6 +7600,10 @@ a:hover {
     margin-bottom: 0;
     text-align: left;
   }
+}
+.site-nav .site-title a {
+  font-size: 1.85rem;
+  font-weight: 700;
 }
 @media screen and (min-width: 800px) {
   .site-nav ul {
@@ -7605,67 +7621,61 @@ a:hover {
   }
 }
 .site-nav ul li a {
-  color: #828282;
-}
-.site-nav ul li a:hover {
-  border-bottom: 3px solid #9179BA;
-  color: #9179BA;
-  padding-bottom: 0.4em;
+  font-weight: 500;
 }
 
-/* footer */
-.site-footer-wrapper .site-footer {
-  padding-top: 40px;
+.site-footer {
+  border-top: 1px solid #e6e6e6;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-.site-footer-wrapper .site-footer ul {
+.site-footer p {
+  text-align: center;
+}
+@media screen and (min-width: 800px) {
+  .site-footer p {
+    text-align: left;
+    float: left;
+  }
+}
+.site-footer ul {
   margin-bottom: 20px;
+  text-align: center;
 }
-.site-footer-wrapper .site-footer ul li {
+@media screen and (min-width: 800px) {
+  .site-footer ul {
+    float: right;
+  }
+}
+.site-footer ul li {
   display: inline-block;
 }
-.site-footer-wrapper .site-footer ul a {
+.site-footer ul a {
   font-size: 1.5em;
 }
 
 /* ------------------------------------------------------------------ */
 /* CONTENT  */
 /* ------------------------------------------------------------------ */
-/* hero images and banner */
-.hero, .banner {
+.banner {
   margin-bottom: 20px;
   text-align: center;
 }
-.hero h2, .banner h2 {
-  margin: 0;
-}
-
-.hero {
-  padding: 0 20px 40px;
-}
-.hero h2 {
-  font-weight: 700;
-}
-@media screen and (min-width: 800px) {
-  .hero h2 {
-    font-size: 2em;
-    white-space: nowrap;
-  }
-}
-
 .banner h2 {
+  margin: 0;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-/* default content wrapper */
 .page-content {
   overflow: auto;
 }
-.page-content a {
-  border-bottom: 1px solid rgba(43, 43, 43, 0.3);
+
+#homepage h2 {
+  margin-bottom: 20px;
 }
 
-/* homepage - projects */
+/* projects page */
 .projects-wrapper {
   clear: both;
   overflow: auto;
@@ -7684,21 +7694,17 @@ a:hover {
   }
 }
 
-#homepage .project-thumbnail a > img {
-  opacity: 0.7;
-  filter: alpha(opacity=70);
+/* contact page*/
+@media screen and (min-width: 800px) {
+  .contact-wrapper {
+    margin: 0 auto;
+    width: 83%;
+  }
 }
-#homepage .project-thumbnail a > img:hover {
-  opacity: 1;
-  filter: alpha(opacity=1);
+.contact-wrapper form input, .contact-wrapper form textarea {
+  width: 100%;
 }
-
-#photography-page ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-#photography-page ul li {
+.contact-wrapper form section {
   margin-bottom: 20px;
 }
 
@@ -7725,22 +7731,6 @@ a:hover {
   border-bottom: none;
 }
 
-/* about page */
-@media screen and (min-width: 800px) {
-  .about-wrapper, .contact-wrapper {
-    margin: 0 auto;
-    width: 83%;
-  }
-}
-
-/* contact page*/
-.contact-wrapper form input, .contact-wrapper form textarea {
-  width: 100%;
-}
-.contact-wrapper form section {
-  margin-bottom: 20px;
-}
-
 /* read more button */
 .call-to-action {
   border: 1px solid rgba(43, 43, 43, 0.3);
@@ -7750,7 +7740,7 @@ a:hover {
   padding: 10px;
 }
 .call-to-action:hover {
-  background-color: #9179BA;
+  background-color: #7059FB;
   color: #fff;
 }
 

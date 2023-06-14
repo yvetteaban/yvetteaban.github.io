@@ -1,26 +1,30 @@
-<footer class="site-footer">
-  <ul class="social">
+<div class="site-footer-wrapper">
+<footer class="site-footer container">
+  <ul>
+    {% if site.linkedin_username %}
+    <li>
+      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" title="LinkedIn"><i class="fa fa-linkedin-square"></i></a>
+    </li>
+    {% endif %}
     {% if site.instagram_username %}
     <li>
       <a href="https://www.instagram.com/{{ site.instagram_username }}" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
     </li>
     {% endif %}
+  <!-- <li>
+      <a href="/contact" title="Contact me"><i class="fa fa-envelope-square"></i></a>
+    </li>     
     {% if site.github_username %}
     <li>
-      <a href="https://github.com/{{ site.github_username }}" target="_blank" title="Github"><i class="fa fa-github"></i></a>
+      <a href="https://github.com/{{ site.github_username }}" target="_blank" title="Github"><i class="fa fa-github-square"></i></a>
     </li>
-    {% endif %}
-    {% if site.linkedin_username %}
-    <li>
-      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-    </li>
-    {% endif %}
-    <li>
-      <a href="/contact" title="Contact me"><i class="fa fa-envelope"></i></a>
-    </li>
+    {% endif %}-->  
   </ul>
-  <p><small>Yvette Aban &copy; 2015-2023.</small></p> 
+  <div>
+    <p><small>Copyright &copy; 2015-2023 Yvette Aban.</small></p> 
+  </div>
+</div>
 </footer>
-
+</div>
 
 

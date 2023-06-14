@@ -5,58 +5,26 @@
 
 <body>
 
-<div class="container">
-    <div class="row">
-        <div class="site-nav-wrapper col-sm-12 col-md-12">
-            {% include nav.html %}
-        </div>  
-    </div>
-</div><!--/container-->
-
+{% include nav.html %}
+  
 <div id="homepage">
 
-    <div class="banner">
-        <img src="{{ site.baseurl }}/assets/yvette-avatar.jpg" alt="photo of Yvette with Pittsburgh in the background"> 
-    </div>   
-
-<div class="container">
-
-    <div class="about-wrapper">  
-        <h2>Hello</h2>
-        <p>I'm a UX designer and researcher based in Pittsburgh, PA. I focus on creating user-centric experiences and making digital products easier to use.</p>
-        <p><a href="/contact" title="Message me">Send me a message</a>.</p>
-        <!-- <div class="project-thumbnail">
-            <a href="/projects/braddock-youth-project/" title="Design">
-                <img src="{{ site.baseurl }}/assets/proj-byp.png" alt="Braddock Youth Project flyers">
-            </a>
+    <div class="container">
+        <div class="row">  
+            <div class="col-sm-6 col-md-6">
+                <img src="{{ site.baseurl }}/assets/yvette-profilepic.jpg" alt="photo of Yvette with Pittsburgh in the background"> 
+            </div>   
+            <div class="col-sm-6 col-md-6">
+                <h2>Hi, I'm Yvette</h2>
+                <p>I'm a UX designer and researcher based in Pittsburgh, Pennsylvania. I create user-centric experiences and make digital products easier to navigate and use.</p>
+                <p><a href="/contact" title="Message me">Send me a message</a>.</p>
+            </div> 
         </div>
-
-        <div class="project-thumbnail floatright">
-            <a href="/photography" title="Photography">
-                <img src="{{ site.baseurl }}/assets/thumbnail-yosemite-yvetteaban.jpg" alt="Yosemite National Park">
-            </a>
-        </div>
-
-        <div class="project-thumbnail">
-            <a href="/projects/imagine-careers/" title="Imagine Careers">
-                <img src="{{ site.baseurl }}/assets/proj-imaginecareers.png" alt="Imagine Careers">
-            </a>
-        </div>
-
-        <div class="project-thumbnail floatright">
-            <a href="/projects/fine-humans/" title="Fine Humans">
-                <img src="{{ site.baseurl }}/assets/proj-finehumans.png" alt="Fine Humans">
-            </a> 
-        </div>  -->
-
     </div>
-</div><!--/container-->
 
 </div>
 
-<div class="site-footer-wrapper">
-    {% include footer.html %}
-</div>
+{% include footer.html %}
 
 </body>
 </html>
