@@ -81,9 +81,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: $serif-font;
 }
-a, a:visited, a:active {
+a, a:visited {
   color: $dark-gray;
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:hover {
   color: $violet-dark;
@@ -102,9 +102,9 @@ a:hover {
 }
 
 
-/* --------------------------------- */
+/* ------------------------------------------------------------------ */
 /* NAVIGATION */
-/* --------------------------------- */
+/* ------------------------------------------------------------------ */
 .site-nav-wrapper {
   margin-bottom: $spacing-unit;
 }
@@ -119,7 +119,6 @@ a:hover {
     margin: 0;
 
     li {
-      display: inline-block;
       list-style: none;
       padding: 0 $spacing-unit;
     }
@@ -127,9 +126,13 @@ a:hover {
   p {
     margin: 0;
   }
+  a {
+    text-decoration: none;
+  }
 }
 .site-nav {
   padding-top: $spacing-unit*2;
+
   .site-title {
     display: block;
     margin-bottom: $spacing-unit;
@@ -153,7 +156,13 @@ a:hover {
       float: right;
     }
     li {
-      padding: 0 $spacing-unit;
+      padding: 10px $spacing-unit;
+      display: block;
+
+      @media screen and (min-width: $on-laptop) {
+        padding: 0 $spacing-unit;
+        display: inline-block;
+      }
 
       a {
         color: $gray-color;
@@ -169,6 +178,27 @@ a:hover {
   }
 }
 
+/* footer */
+.site-footer-wrapper {
+  .site-footer {
+    padding-top: $spacing-unit*2;
+  
+    ul {
+      margin-bottom: $spacing-unit;
+      li {
+        display: inline-block;
+      }
+      a {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+
+/* ------------------------------------------------------------------ */
+/* CONTENT  */
+/* ------------------------------------------------------------------ */
 /* hero images and banner */
 .hero, .banner {
   margin-bottom: $spacing-unit; 
@@ -280,7 +310,7 @@ a:hover {
 }
 
 /* about page */
-.about-wrapper {
+.about-wrapper, .contact-wrapper {
   @media screen and (min-width: $on-laptop) {
     margin: 0 auto;
     width: 83%;
@@ -289,10 +319,7 @@ a:hover {
 
 /* contact page*/
 .contact-wrapper {
-  @media screen and (min-width: $on-laptop) {
-    margin: 0 auto;
-    width: 83%;
-  }
+
   form {
     input, textarea {
       width: 100%;
@@ -314,19 +341,6 @@ a:hover {
   &:hover {
     background-color: $violet;
     color: #fff;
-  }
-}
-
-/* footer */
-.site-footer-wrapper {
-  .site-footer {
-    padding-top: $spacing-unit*2;
-  }
-  .social {
-    margin-bottom: $spacing-unit;
-    a {
-      font-size: 1.5em;
-    }
   }
 }
 
