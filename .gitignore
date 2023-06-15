@@ -1,14 +1,7 @@
 
-_site/feed.xml
-
+_site/
 .DS_Store
-
 _drafts/
-
-about
-
-blog
-
-photography
-
-_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
