@@ -237,55 +237,61 @@ a:hover {
   }
 }
 
-.page-content {
-  overflow: auto;
-}
-
-#homepage {
+/* home */
+.homepage {
   h2 {
     margin-bottom: $spacing-unit;
   }
 }
 
-/* projects page */
-.projects-wrapper {
-  clear: both;
-  overflow: auto;
-}
-.project-thumbnail {
-  margin-bottom: $spacing-unit;
-  position: relative;
-
-  @media screen and (min-width: $on-laptop) {
-    float: left;
-
-    &.floatright {
-      float: right;
-    }
+/* projects */
+.projects-page {
+  .content-wrapper{
+    clear: both;
+    overflow: auto;
   }
 
-}
+  .project-thumbnail {
+    margin-bottom: $spacing-unit;
+    position: relative;
 
-/* contact page*/
-.contact-wrapper {
-  @media screen and (min-width: $on-laptop) {
-    margin: 0 auto;
-    width: 83%;
-  }
-  form {
-    input, textarea {
-      width: 100%;
+    @media screen and (min-width: $on-laptop) {
+      float: left;
+
+      &.floatright {
+        float: right;
+      }
     }
-    section {
-      margin-bottom: $spacing-unit;
-    }
+
   }
 }
 
-/* blog posts */
-.posts-wrapper {
-  margin-bottom: $spacing-unit;
+/* contact */
+.contact-page {
+  .content-wrapper {
+    form {
+      input, textarea {
+        width: 100%;
+      }
+      fieldset, input {
+        margin-bottom: $spacing-unit;
+      }
+    }
+  }
 }
+
+/* resume */
+.resume-page {
+  section {   
+    h2 {
+      border-bottom: 3px solid transparent;
+      border-image: linear-gradient(90deg, rgba(245,24,249,1) 0%, rgba(57,24,249,1) 100%);
+      border-image-slice: 1;
+    }
+  }
+}
+		  
+/* blog */
 .display-flex {
   display: flex;
   flex-wrap: wrap;
@@ -293,6 +299,16 @@ a:hover {
 .display-flex > [class*='col-'] {
   display: flex;
   flex-direction: column;
+}
+.post-summary {
+  margin-bottom: $spacing-unit*2;
+
+  a {
+    &:hover {
+      background: $violet;
+      color: #fff;
+    }
+  }
 }
 .post-header {
   h3 {
@@ -304,20 +320,3 @@ a:hover {
     }
   }
 }
-
-/* read more button */
-.call-to-action {
-  border: 1px solid rgba(43,43,43,.3);
-  -webkit-border-radius: 5px;
-  border-radius: 5px;  
-  display: inline-block;
-  padding: $spacing-unit/2;
-
-  &:hover {
-    background-color: $violet;
-    color: #fff;
-  }
-}
-
-
-
