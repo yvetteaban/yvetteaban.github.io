@@ -7694,7 +7694,7 @@ a:hover {
 .contact-page .content-wrapper form input, .contact-page .content-wrapper form textarea {
   width: 100%;
 }
-.contact-page .content-wrapper form section {
+.contact-page .content-wrapper form fieldset, .contact-page .content-wrapper form input {
   margin-bottom: 20px;
 }
 
@@ -7731,7 +7731,5 @@ a:hover {
 .post-header h3 a {
   border-bottom: none;
 }
-
-/* 404 */
 
 /*# sourceMappingURL=main.css.map */

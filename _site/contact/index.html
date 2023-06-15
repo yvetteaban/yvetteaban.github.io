@@ -42,25 +42,24 @@
 	
 	<div class="col-sm-8 col-md-8 col-sm-offset-2 col-md-offset-2">
 	<div class="content-wrapper">
-		<p>Fill out the form below if you have a project I can help with or want to say 'hey'.</p>
+		<p>Fill out the form below if you have a project I can help with or want to chat.</p>
 
-		<form id="contact-ya" action="https://formspree.io/hello@yvetteaban.com" method="POST">
-		<section>
-			<label for="name">Name (required)</label> <br /> 
-			<input type="text" id="name" name="name" required="true">
-		</section>
-		<section>
-			<label for="email">Email (required)</label> <br /> 
-			<input type="email" id="email" name="_replyto" required="true">
-		</section>
-		<section>
-			<label for="subject">Message (required)</label> <br />
-			<textarea id="subject" name="subject" placeholder="Write message here..." style="height:120px" required="true"></textarea>	  	
-		</section>
-		<section>
+		<form id="fs-ya" name="contact-form" accept-charset="utf-8" action="https://formspree.io/f/moqzgwdj" method="post">
+			<fieldset id="fs-frm-inputs">
+			  <label for="full-name">Full Name (required)</label>
+			  <input type="text" name="name" id="full-name" placeholder="First and Last" required="true">
+
+			  <label for="email-address">Email Address (required)</label>
+			  <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="true">
+
+			  <label for="message">Message (required)</label>
+			  <textarea rows="5" name="message" id="message" placeholder="Type message here" required=""></textarea>
+			  <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+
+			</fieldset>
 			<input type="submit" value="Send Message">
-		</section>
 		</form>
+		  
 	</div>
 	</div>
 </div>	

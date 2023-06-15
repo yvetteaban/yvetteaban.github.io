@@ -269,15 +269,11 @@ a:hover {
 /* contact */
 .contact-page {
   .content-wrapper {
-    // @media screen and (min-width: $on-laptop) {
-    //   margin: 0 auto;
-    //   width: 80%;
-    // }
     form {
       input, textarea {
         width: 100%;
       }
-      section {
+      fieldset, input {
         margin-bottom: $spacing-unit;
       }
     }
@@ -286,10 +282,6 @@ a:hover {
 
 /* resume */
 .resume-page {
-  // @media screen and (min-width: $on-laptop) {
-  //   margin: 0 auto;
-  //   width: 70%;
-  // }
   section {   
     h2 {
       border-bottom: 3px solid transparent;
@@ -298,7 +290,7 @@ a:hover {
     }
   }
 }
-
+		  
 /* blog */
 .display-flex {
   display: flex;
@@ -328,13 +320,3 @@ a:hover {
     }
   }
 }
-
-/* 404 */
-// .notfound-page {
-//   .content-wrapper {
-//     @media screen and (min-width: $on-laptop) {
-//       margin: 0 auto;
-//       width: 80%;
-//     }
-//   }
-// }
