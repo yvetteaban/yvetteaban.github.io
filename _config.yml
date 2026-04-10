@@ -1,16 +1,16 @@
 # Site settings
-title: Yvette Aban
+title: Yvette Aban | UX Designer
 
-#description: 'Yvette Aban's portfolio site and blog.'
+description: 'Yvette is a product designer with a background in front-end development. This is her portfolio.'
 #url: "https://yvetteaban.com" # the base hostname & protocol for your site
 #baseurl: "" # the subpath of your site, e.g. /blog/
 
-instagram_username: yvetteaban
-github_username:  yvetteaban
+# instagram_username: yvetteaban
+# github_username:  yvetteaban
 linkedin_username:  yvetteaban
 email: hello@yvetteaban.com
 
-comments: true
+comments: false
 
 # Build settings
 markdown: kramdown

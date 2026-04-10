@@ -1,12 +1,11 @@
 <div class="site-nav-wrapper">
 	<nav class="site-nav container">
-		<div class="site-title">
-			<a href="{{ site.baseurl }}/" title="Yvette Aban">{{ site.title }}</a>
-		</div>		
+		<div class="site-title"><a href="{{ site.baseurl }}/" title="Yvette Aban">Yvette Aban</a></div>		
 		<ul>
-			<li><a href="/projects" title="Projects">Projects</a></li>
 			<li><a href="/contact" title="Contact">Contact</a></li>
-			<!-- <li><a href="/resume" title="Resume">Resume</a></li> -->
+            {% if site.linkedin_username %}
+            <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" title="LinkedIn">LinkedIn</a></li>
+            {% endif %}			
 		</ul>
 	</nav>
 </div>

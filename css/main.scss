@@ -3,11 +3,11 @@
 @charset "UTF-8"; 
 
 // Our variables
-$base-font-family: 'Geologica', sans-serif;
+$base-font-family: "Montserrat", sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.6;
-$serif-font: 'Roboto Slab', serif;
+$serif-font: "Libre Baskerville", serif;
 
 $spacing-unit:     20px;
 
@@ -23,14 +23,23 @@ $dark-gray: #282828;
 $dark-gray-lighter: lighten($dark-gray, 40%);
 
 // Colors
-$white-color: #fff;
-$black-color: #000;
 $teal-color: #00baa7;
 $teal-color-lighter: lighten($teal-color, 5%);
 $teal-color-darker: darken($teal-color, 15%);
 $finehumans-yellow: #CFC329;
 $violet: #7059FB;
 $violet-dark: #4807b1;
+
+$surface-light: #fff;
+$surface-dark: #000;
+$highlight-light: #9194fa;
+$highlight-dark: #505389;
+$surface-100: #e2e0da;
+$surface-200: #787877;
+$surface-300: #baccfa;
+$surface-400: #1c2627;
+
+//light pink: #debce2  #7c97fd
 
 //Width of the content area
 $content-width:    1170px;
@@ -63,24 +72,30 @@ $on-laptop:        800px;
   "bootstrap"
 ;
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 html {
   height: 100%;
 }
 body {
+  background-color: $surface-300;
+  //background-image: linear-gradient(to right, #d3cce3, #e9e4f0); 
   font-family: $base-font-family;
+  color: $surface-400;
   font-size: 16px;
+  font-weight: 400;
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  //line-height: 1.8em;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: $serif-font;
 }
 a, a:visited {
+  color: $surface-400;
   text-decoration: underline;
 }
 a:hover {
@@ -103,49 +118,44 @@ a:hover {
 /* ------------------------------------------------------------------ */
 /* NAVIGATION */
 /* ------------------------------------------------------------------ */
-.site-nav-wrapper {
-  //background-color: #00baa7;
-  margin-bottom: $spacing-unit;
-
-  @media screen and (min-width: $on-laptop) {
-    margin-bottom: $spacing-unit*4;
-  }
-}
-.site-footer-wrapper {
-  margin-top: $spacing-unit*2;
-
-  @media screen and (min-width: $on-laptop) {
-    margin-top: $spacing-unit*4;
-  }
-}
 
 .site-nav, .site-footer {
+  padding-top: $spacing-unit;
+  padding-bottom: $spacing-unit;
+  text-align: center;
+
   ul {
     list-style: none;
     margin: 0;
 
     li {
       list-style: none;
-      padding: 0 $spacing-unit;
+      //padding: 0 $spacing-unit;
     }
   }
   a {
-    //background-color: #CFC329;
     display: block;
     text-decoration: none;
   }
 }
+ .site-title {
+    margin-bottom: $spacing-unit;
+    //text-align: center;
+
+    @media screen and (min-width: $on-laptop) {
+      float: left;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+  }
 
 .site-nav {
-  padding-top: $spacing-unit*1.5;
-  padding-bottom: $spacing-unit;
-  text-align: center;
 
   a {
-    color: $black-color;
     font-size: $base-font-size;
     margin: 0 -.25rem;
-    padding: 0 .25rem;
+    //padding: 0 .25rem;
     background: linear-gradient(0deg, $violet, $violet) no-repeat right bottom / 0 var(--bg-h);
     transition: background-size 350ms;
     --bg-h: 100%;
@@ -156,68 +166,26 @@ a:hover {
     }
   }
 
-  .site-title {
-    margin-bottom: $spacing-unit;
-    text-align: center;
-
-    @media screen and (min-width: $on-laptop) {
-      float: left;
-      margin-bottom: 0;
-      text-align: left;
-    }
-    
-    a {
-      font-size: 1.85rem;
-      font-weight: 700;
-    }
-  }
-
   ul {
-    @media screen and (min-width: $on-laptop) {
-      float: right;
-    }
-    li {
-      padding: 10px $spacing-unit;
-      display: block;
-
-      @media screen and (min-width: $on-laptop) {
-        padding: 0 $spacing-unit;
-        display: inline-block;
-      }
-    a {
-      font-weight: 500;
-    }
-    }
-  }
-}
-
-.site-footer {
-  border-top: 1px solid $gray-color-light;
-  padding-top: $spacing-unit*1.5;
-  padding-bottom: $spacing-unit*1.5;
-
-  p {
-    text-align: center;
-
-    @media screen and (min-width: $on-laptop) {
-      //padding-left: $spacing-unit;
-      text-align: left;
-      float: left;
-    }
-  }
-  ul {
-    margin-bottom: $spacing-unit;
-    text-align: center;
-
     @media screen and (min-width: $on-laptop) {
       float: right;
     }
 
     li {
       display: inline-block;
+      padding: 0 8px;
+
     }
-    a {
-      font-size: 1.5em;
+  }
+
+}
+
+.site-footer {
+  font-size: 0.8em;
+  a {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
     }
   }
 }
@@ -228,18 +196,27 @@ a:hover {
 /* ------------------------------------------------------------------ */
 .banner {
   margin-bottom: $spacing-unit; 
-  text-align: center;
+  //text-align: center;
   h2 {
     margin: 0;
     padding-top: $spacing-unit;
     padding-bottom: $spacing-unit;
+    font-size: 2.5em;
   }
 }
 
-/* home */
 .homepage {
+  .intro {
+    //text-align: center;
+    padding: 1em 0;
+
+    // @media screen and (min-width: $on-laptop) {
+    //   width: 80%;
+    //   margin: 0 auto;
+    // }
+  }
   h2 {
-    margin-bottom: $spacing-unit;
+    line-height: 1.25em;
   }
 }
 
@@ -269,12 +246,22 @@ a:hover {
 .contact-page {
   .content-wrapper {
     form {
+      background: rgba(255, 255, 255, 1);
+      color: $surface-dark;
+      padding: 20px;
+      border: 1px solid $surface-400;
+      border-radius: 8px;
       input, textarea {
+        
         width: 100%;
       }
       fieldset, input {
         margin-bottom: $spacing-unit;
       }
+
+    }
+    label {
+      font-weight: 200;
     }
   }
 }
