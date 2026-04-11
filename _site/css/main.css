@@ -2,10 +2,8 @@
 /**
  * Reset some basic elements
  */
-@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=waving_hand");
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -7507,16 +7505,31 @@ html {
 }
 
 body {
-  background-color: #baccfa;
+  background-color: #f5f3eb;
   font-family: "Montserrat", sans-serif;
   color: #1c2627;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(-45deg, rgba(202, 187, 233, 0.3019607843), #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
 }
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: "Libre Baskerville", serif;
 }
@@ -7546,6 +7559,11 @@ a:hover {
 .tags {
   color: #808080;
   font-family: "Libre Baskerville", serif;
+}
+
+.material-symbols-outlined {
+  font-size: 34px;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
 /* ------------------------------------------------------------------ */
@@ -7615,19 +7633,24 @@ a:hover {
 /* ------------------------------------------------------------------ */
 .banner {
   margin-bottom: 20px;
+  padding: 40px 0 0;
 }
-.banner h2 {
-  margin: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 2.5em;
+@media screen and (min-width: 800px) {
+  .banner {
+    padding: 100px 0 0;
+  }
 }
-
 .homepage .intro {
-  padding: 1em 0;
+  padding: 40px 0 60px;
+}
+@media screen and (min-width: 800px) {
+  .homepage .intro {
+    padding: 100px 0 0;
+  }
 }
 .homepage h2 {
   line-height: 1.25em;
+  font-size: 2.2em;
 }
 
 /* projects */
@@ -7649,6 +7672,9 @@ a:hover {
 }
 
 /* contact */
+.contact-page {
+  padding-bottom: 60px;
+}
 .contact-page .content-wrapper form {
   background: rgb(255, 255, 255);
   color: #000;
@@ -7664,13 +7690,6 @@ a:hover {
 }
 .contact-page .content-wrapper label {
   font-weight: 200;
-}
-
-/* resume */
-.resume-page section h2 {
-  border-bottom: 3px solid transparent;
-  border-image: linear-gradient(90deg, rgb(245, 24, 249) 0%, rgb(57, 24, 249) 100%);
-  border-image-slice: 1;
 }
 
 /* blog */
